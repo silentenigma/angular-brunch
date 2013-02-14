@@ -1,0 +1,184 @@
+@import "twitter/bootstrap";
+@import "twitter/font-awesome";
+@import "compass/css3";
+
+
+$background: darken(#BB9D81, 5%);
+
+.notifications{
+	position: fixed;
+	z-index: 1000
+}
+
+.error-text{
+	color: $errorText !important;
+}
+.success-text {
+	color: $successText;
+}
+
+body{
+	background-color: #ffffff;
+	background: url('../img/back-pattern.png');
+	color: lighten(#64584C,10%);
+}
+
+
+.front-container{
+	width: 100%;
+	height: 100%;
+	
+	// @include background-size(cover);
+}
+
+.pending-request{
+	position:absolute;
+	top: 10px;
+	text-center: center;
+	width: 100%;
+	div{
+		font-size: 12px;
+		margin: 0 auto;
+		width:105px;
+	}
+}
+
+
+/*
+*	Buttons
+*/
+button.disabled {
+	background-color: #999 !important;
+}
+
+/*
+*
+* Login form 
+*
+*/
+
+.form-container{
+	width: 480px;
+	height: 100%;
+
+	margin: 70px auto;
+	padding-bottom: 20px;
+
+	@include box-shadow(rgba(black, 0.2) 0 0 10px);
+	@include border-radius(6px);
+	// border: 1px solid darken($background, 10%);
+	background-color: #ffffff;
+
+	.form-header{
+		text-align: center;
+		padding: 20px 0px;
+		border-bottom: 1px solid lighten($background, 30%);
+	}
+
+	h4{
+		font-size: 22px;
+	
+	}
+
+	.form-error, .form-success{
+		font-size:13px;
+		margin: 10px 0px;
+		text-align: center;
+	}
+
+	.valid-error{
+		font-size: 12px;
+		color: #c10000;
+		display: block;
+		margin: 5px 0px;
+		margin-left: 45px;
+		margin-bottom: 10px;
+		text-align: justify;
+		min-height: 15px;
+		line-height: 15px;
+	}
+
+	.valid-icon{
+		margin-left: 3px;
+	}
+
+	.user-form{
+
+		margin: 0px 0px;
+		margin-top: 20px;
+
+		.control-group{
+			margin-bottom: 0px;
+		}
+
+		.add-on{
+			height: 28px;
+			padding-left: 8px;
+			padding-right: 8px;
+			line-height: 28px;
+			width: 25px;
+		}
+
+		.controls{
+			margin-left: 110px;
+		}
+
+		label{
+			font-size: 12px;
+			width: 100px;
+			margin-top: 5px;
+		}
+
+		input{
+			font-size: 15px;
+			padding: 8px 8px;
+			border: 1px solid lighten(#64584C,50%);
+			outline:none;
+			color: #535353;
+			@include box-shadow(none);
+			&:focus{
+				border: 1px solid lighten(#64584C,20%);
+				color: #535353;
+			}
+		}
+
+		.input-error{
+			font-size: 11px;
+			display: block;
+			margin-top: 3px;
+			height: 15px;
+		}
+
+		.submit-container{
+			padding:5px 125px;
+			// background-color: lighten($background, 35%);
+
+			button{
+				background-color: darken(#E7633D, 5%);
+				border: none;
+				display: block;
+				width: 100%;
+				padding: 10px 0px;
+				color: #ffffff;
+				@include border-radius(4px);
+
+				&:hover{
+					background-color: darken(#E7633D, 10%);
+				}
+
+				i{
+					margin-right: 8px;
+				}
+			}
+
+			a{
+				margin-top: 15px;
+				font-size: 11px;
+				text-align: center;
+				display: block;
+			}
+		}
+	}	
+}
+
+

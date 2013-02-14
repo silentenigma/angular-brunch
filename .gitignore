@@ -1,0 +1,12 @@
+**/.DS_Store
+nbproject
+manifest.mf
+build.xml
+
+
+public
+node_modules
+npm-debug.log
+.sass-cache
+
+test

@@ -1,0 +1,34 @@
+ <div class="form-container">
+
+    <div class="form-header">
+      <h4>Forgot your password?</h4>
+      <div>Enter your email to reset your password.</div>
+    </div>
+
+    <div ng-show="success" class="form-success alert alert-success" ng-bind-html-unsafe="success"></div>
+
+    <form id="forgot-form" ng-hide="success" class="form-horizontal user-form" novalidate>
+      <div class="form-error" ng-class="{'alert alert-error': errors}" ng-bind-html-unsafe="errors"></div>
+      <!-- Remind password control group  -->
+      <div class="control-group">
+     
+        <div class="controls">
+          <div class="input-prepend">
+            <span class="add-on"><i class="icon-envelope-alt icon-large"></i></span>
+            <input type="text" ng-model="credentials.email" placeholder="Email" name="email" id="Email">
+          </div>
+
+          <span class="valid-error"></span>
+       
+        </div> 
+
+      </div>
+
+      <div class="submit-container"> 
+        <button ng-show="isPending" type="submit" class=""><i class="icon-spinner icon-spin icon-white"></i>Submit</button> 
+        <button ng-hide="isPending" type="submit" class=""><i class="icon-ok-sign icon-white"></i>Submit</button>
+
+      </div>
+
+    </form>
+</div>

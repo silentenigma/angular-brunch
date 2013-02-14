@@ -1,0 +1,71 @@
+<div class="form-container">
+
+    <div class="form-header">
+      <h4>Create an new account</h4>
+    </div>
+
+    <form  id="register-form" class="form-horizontal user-form" name="validForm" novalidate>
+      <div class="form-error" ng-class="{'alert alert-error': errors}" ng-bind-html-unsafe="errors" ></div>
+      <!-- Email control group  -->
+      <div class="control-group" ng-class="{error: error.Emailj}">
+     
+        <div class="controls">
+
+          <div class="input-prepend">
+            <span class="add-on"><i class="icon-envelope-alt icon-large"></i></span>
+            <input type="text" ng-model="credentials.email" name="email" id="inputEmail" placeholder="Email">
+          </div>
+
+<!--          <span class="valid-icon">
+          <i ng-show="process.email" class="icon-spinner icon-spin"></i>
+          <i ng-show="valid.email" class="icon-ok success-text"></i>
+          <i ng-show="error.email[0]" class="icon-remove error-text"></i>
+         </span> -->
+         <span class="valid-error"></span>
+       
+        </div> 
+
+      </div> <!-- end email group  -->
+
+      <!-- Username control group -->
+      <div class="control-group">
+
+        <div class="controls">
+
+          <div class="input-prepend">
+            <span class="add-on"><i class="icon-user icon-large"></i></span>
+            <input  type="text" placeholder="Username" ng-model="credentials.username" name="username" id="inputUsername">
+          </div>
+
+         <span class="valid-error"></span>
+
+        </div>
+
+      </div> <!-- end Username group -->
+
+      <!-- Password control group -->
+      <div class="control-group" ng-class="{error: error.Passwordl}">
+
+        <div class="controls">
+
+          <div class="input-prepend">
+            <span class="add-on"><i class="icon-lock icon-large"></i></span>
+            <input type="password" placeholder="Password" ng-model="credentials.password" name="password" id="inputPassword">
+          </div>
+
+         <span class="valid-error"></span>
+
+        </div>
+
+      </div> <!-- end Password group -->
+
+      <!-- Submit container -->
+      <div class="submit-container">  
+          <button ng-show="isPending" type="submit" class=""><i class="icon-spinner icon-spin icon-white"></i>Sign up</button> 
+        <button ng-hide="isPending" type="submit" class=""><i class="icon-ok-sign icon-white"></i>Sign up</button>
+
+      </div>
+
+    </form> <!-- register form -->
+
+</div>

@@ -1,0 +1,17 @@
+<div ng-controller="frontController">
+
+<div class="navbar navbar-static-top">
+	<div class="navbar-inner">
+	  <div class="container">
+	  	<div ng-include=" 'views/nav.html' "></div>
+	  </div>
+	</div>
+</div>
+
+
+<div class="front-container" ng-switch="subview">
+	<div ng-switch-when="login" ng-include=" 'views/login.html' "></div>
+	<div ng-switch-when="home" ng-include=" 'views/home.html' "></div>
+</div>
+
+</div>

@@ -1,0 +1,57 @@
+GET /api/1/auth  -> get user session
+POST /api/1/auth -> login user
+DELETE /api/1/auth -> logout logged user
+
+
+POST /api/1/user  -> register new user
+PUT /api/1/user/(:id) -> update user settings
+DELETE /api/1/user/(:id) -> delete user
+
+POST /api/user/remind -> remind password 
+
+
+
+
+services.auth 
+	-> new crud user
+	-> new crud session
+
+	-> login()
+	-> logout()
+	-> getUserToken()
+	-> isUserAuth()
+
+
+-> Form layouts directive V
+
+-> Remember pasword form V
+	-> validate form V
+-> Remember pasword server email
+	-> check if user email is in database V -> separete function used in register
+	-> send email
+-> Reset password form V
+	-> validate form V
+
+
+callbacks:
+
+	valid -> if value previously invalid is valid
+	invalid -> if value is invalid
+
+validators:
+	email: (success)
+
+	fn: 
+
+
+	email:
+	validation -> (value, expressonObject, name)
+
+		if email
+
+
+
+
+
+
+

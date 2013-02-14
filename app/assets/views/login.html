@@ -1,0 +1,10 @@
+<div ng-controller="loginController" class="container">
+
+	<div ng-switch="subview">
+		<div ng-switch-when="default"> <login></login>  </div>
+		<div ng-switch-when="forgot" > <forgot></forgot> </div>
+		<div ng-switch-when="reset"  > <reset></reset> </div>
+		<div ng-switch-when="register"  > <register></register> </div>
+	</div>
+
+</div>

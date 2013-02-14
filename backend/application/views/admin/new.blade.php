@@ -1,0 +1,1 @@
+This is the /Users/Robert/Witryny/src/angular-brunch/backend/application/views/admin/new.blade.php view
